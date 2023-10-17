@@ -91,22 +91,25 @@ set pumheight=10
 " ===  操作系 ===
 " 行をまたいで移動
 set whichwrap=b,s,h,l,<,>,[,],~
-" - Normal mode
-" ;でコマンド入力
+" [Normal] ;でコマンド入力
 noremap ; :
-" 行頭にカーソル移動
+" [Normal] 行頭にカーソル移動
 noremap <Space>h ^
-" 行末にカーソル移動
+" [Normal] 行末にカーソル移動
 noremap <Space>l $
-" 左のタブに移動
+" [Normal] 左のbufferタブに移動
 noremap <C-p> :bprevious<CR>
-" 右のタブに移動
+" [Normal] 右のbufferタブに移動
 noremap <C-n> :bnext<CR>
-" - Insert mode
-" jjをESCとして扱う
+" [Insert] jjをESCとして扱う
 inoremap jj <Esc>
-" 行途中で次の行に新規挿入
+" [Insert] 行途中で次の行に新規挿入
 inoremap <C-o> <C-o>o
+" [Insert] カーソルを左に移動
+inoremap <C-b> <Left>
+" [Insert] カーソルを右に移動
+inoremap <C-f> <Right>
+
 
 
 " === 編集系 ===
