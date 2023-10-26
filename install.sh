@@ -5,22 +5,13 @@ SCRIPT_DIR=$(cd $(dirname $0); pwd)
 # ####  Install  #####
 # ####################
 
-# vim
-echo "========================"
-echo " vim will be installed"
-echo "========================"
-sudo wget -O /opt/vim.appimage https://github.com/vim/vim-appimage/releases/download/v9.0.2034/Vim-v9.0.2034.glibc2.29-x86_64.AppImage
-sudo chmod +x /opt/vim.appimage
-sudo ln -sf /opt/vim.appimage /usr/bin/vim
-echo ">>> Done"
-echo ""
-
 # neovim
 echo "=========================="
 echo " neovim will be installed"
 echo "=========================="
 sudo wget -O /opt/nvim.appimage https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 sudo chmod +x /opt/nvim.appimage
+sudo ln -sf /opt/nvim.appimage /usr/bin/vim
 sudo ln -sf /opt/nvim.appimage /usr/bin/nvim
 echo ">>> Done"
 echo ""
