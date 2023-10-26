@@ -7,6 +7,8 @@ git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
 ```
 以下がインストール（再インストール）される
 
+ただし，vimで起動するeditorはneovim
+
 - vim
 - neovim
 - tmux
