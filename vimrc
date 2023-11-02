@@ -84,6 +84,9 @@ augroup END
 set completeopt=menuone,noinsert
 " 補完表示時のEnterで改行をしない
 inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
+" 補完候補の選択をTab/Shitf-Tabで変更
+inoremap <expr><Tab>  pumvisible() ? "<C-n>" : "<Tab>"
+inoremap <expr><S-Tab>  pumvisible() ? "<C-p>" : "<S-Tab>"
 " ポップアップメニューの最大高さ
 set pumheight=10
 
