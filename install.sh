@@ -89,6 +89,8 @@ echo ""
 # tmux
 echo "setting tmux... "
 ln -sf $SCRIPT_DIR/tmux.conf ~/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/bin/install_plugins
 echo ">>> Done"
 echo ""
 
