@@ -1,20 +1,19 @@
 # dotfiles
 ロボ向けの設定ファイル
+
+注）`vim`コマンドで起動するエディタはneovim
 ## インストール
 ```
 git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
-./dotfiles/install.sh
+~/dotfiles/install.sh
 ```
 以下がインストール（再インストール）される
-
-ただし，vimで起動するeditorはneovim
-
-- vim
-- neovim
+- Neovim
 - tmux
 - xsel
 - python3
 - pip3
+- libfuse2 (ubuntu22.04のみ)
 
 以下がコピーされる
 
@@ -22,8 +21,7 @@ git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
 
 以下がセットアップされる
 
-- vim
-- neovim
+- Neovim
 - tmux
 
 ## トラブルシューティング
