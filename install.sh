@@ -68,24 +68,10 @@ cp -f -v $SCRIPT_DIR/MesloLGS\ NF\ Regular.ttf ~/.fonts/
 echo ">>> Done"
 echo ""
 
-# vim
-echo "setting vim... "
-if [ -d ~/.vim/undo ]; then
-    rm -rf ~/.vim/undo
-fi
-if [ -d ~/.vim/plugged ]; then
-    rm -rf ~/.vim/plugged
-fi
-mkdir -p -v ~/.vim/undo
-ln -sf $SCRIPT_DIR/vimrc ~/.vimrc
-pip3 install neovim pynvim
-echo ">>> Done"
-echo ""
-
 # neovim
 echo "setting neovim... "
-if [ -d ~/.local/share/nvim ]; then
-    rm -rf ~/.local/share/nvim
+if [ -d ~/.local/share/nvim/plugged ]; then
+    rm -rf ~/.local/share/nvim/plugged
 fi
 if [ -d ~/.config/nvim/undo ]; then
     rm -rf ~/.config/nvim/undo
@@ -94,6 +80,7 @@ if [ ! -d ~/.config/nvim ]; then
     mkdir -p -v ~/.config/nvim
 fi
 ln -sf $SCRIPT_DIR/init.vim ~/.config/nvim/init.vim
+pip3 install pynvim
 echo ">>> Done"
 echo ""
 
