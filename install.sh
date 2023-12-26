@@ -70,8 +70,8 @@ echo ""
 
 # neovim
 echo "setting neovim... "
-if [ -d ~/.local/share/nvim ]; then
-    rm -rf ~/.local/share/nvim
+if [ -d ~/.local/share/nvim/plugged ]; then
+    rm -rf ~/.local/share/nvim/plugged
 fi
 if [ -d ~/.config/nvim/undo ]; then
     rm -rf ~/.config/nvim/undo
@@ -80,6 +80,7 @@ if [ ! -d ~/.config/nvim ]; then
     mkdir -p -v ~/.config/nvim
 fi
 ln -sf $SCRIPT_DIR/init.vim ~/.config/nvim/init.vim
+pip3 install pynvim
 echo ">>> Done"
 echo ""
 
