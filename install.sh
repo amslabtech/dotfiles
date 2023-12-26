@@ -40,6 +40,17 @@ sudo apt install python3 python3-pip -y --no-install-recommends
 echo ">>> Done"
 echo ""
 
+# libfuse2
+os_version=$(cat /etc/os-release | grep VERSION_ID | cut -d '"' -f 2)
+if [ $os_version == "22.04" ]; then
+    echo "============================"
+    echo " libfuse2 will be installed"
+    echo "============================"
+    sudo apt install libfuse2 -y --no-install-recommends
+    echo ">>> Done"
+    echo ""
+fi
+
 
 # ##################
 # ####  Setup  #####
@@ -89,6 +100,9 @@ echo ""
 # tmux
 echo "setting tmux... "
 ln -sf $SCRIPT_DIR/tmux.conf ~/.tmux.conf
+if [ -d ~/.tmux ]; then
+    rm -rf ~/.tmux
+fi
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/bin/install_plugins
 echo ">>> Done"
