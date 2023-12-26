@@ -12,7 +12,7 @@ git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
 - tmux
 - xsel
 - python3
-- pip3
+- python3-pip
 - libfuse2 (ubuntu22.04のみ)
 
 以下がコピーされる
@@ -25,6 +25,9 @@ git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
 - tmux
 
 ## トラブルシューティング
+#### Neovimのプラグインのインストールが開始されない場合
+エディタを再起動して下さい
+
 #### 設定がおかしくなった場合
 再インストールすれば，設定の上書きおよびキャッシュの削除が行われる
 
