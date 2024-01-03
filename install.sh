@@ -5,6 +5,17 @@ SCRIPT_DIR=$(cd $(dirname $0); pwd)
 # ####  Install  #####
 # ####################
 
+# font
+echo "=============================="
+echo " nerd-fonts will be installed"
+echo "=============================="
+if [ ! -d ~/.local/share/fonts ]; then
+    mkdir -p -v ~/.local/share/fonts
+fi
+cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
+echo ">>> Done"
+echo ""
+
 # neovim
 echo "=========================="
 echo " neovim will be installed"
@@ -59,15 +70,6 @@ echo "======="
 echo " Setup"
 echo "======="
 
-# font
-echo "copy font... "
-if [ ! -d ~/.fonts ]; then
-    mkdir -v ~/.fonts
-fi
-cp -f -v $SCRIPT_DIR/MesloLGS\ NF\ Regular.ttf ~/.fonts/
-echo ">>> Done"
-echo ""
-
 # neovim
 echo "setting neovim... "
 if [ -d ~/.local/share/nvim/plugged ]; then
@@ -98,6 +100,6 @@ echo ""
 echo ""
 echo "==="
 echo "Finish!!"
-echo "please set your terminal font as 'MesloLGS NF Regular'"
+echo "please set your terminal font as 'Hack Regular'"
 echo "==="
 echo ""
