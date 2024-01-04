@@ -44,5 +44,7 @@ set -g terminal-overrides "xterm:colors=256"
 shellでcolor設定している場合は解除して下さい
 
 #### 文字の表示がおかしい
-True Colorに対応していない可能性があります<br>
-tmux内でNeovimを起動すると正常に表示されやすいです
+- 端末のフォントが不適切な可能性があります
+  - `Hack Nerd Font Regular`に変更して下さい
+- True Colorに対応していない可能性があります<br>
+  - tmux内でNeovimを起動すると正常に表示されやすいです
