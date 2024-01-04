@@ -73,8 +73,6 @@ call plug#end()
 " === Look ===
 set number
 set cursorline
-set colorcolumn=121
-highlight ColorColumn guibg=gray ctermbg=gray
 " Enable True Color
 set termguicolors
 " The maximum number of items to show in the pop-up menu
