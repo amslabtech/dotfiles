@@ -1,7 +1,7 @@
 # dotfiles
 ロボ向けの設定ファイル
 
-注）`vim`コマンドで起動するエディタはneovim
+注）`vim`コマンドで起動するエディタはNeovim
 ## インストール
 ```
 git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
@@ -45,4 +45,4 @@ shellでcolor設定している場合は解除して下さい
 
 #### 文字の表示がおかしい
 True Colorに対応していない可能性があります<br>
-tmux内でNeovimを開くと正常に表示されやすいです
+tmux内でNeovimを起動すると正常に表示されやすいです
