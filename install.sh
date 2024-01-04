@@ -12,7 +12,7 @@ echo "=============================="
 if [ ! -d ~/.local/share/fonts ]; then
     mkdir -p -v ~/.local/share/fonts
 fi
-cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
+cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/Hack/Regular/HackNerdFont-Regular.ttf
 echo ">>> Done"
 echo ""
 
@@ -100,6 +100,6 @@ echo ""
 echo ""
 echo "==="
 echo "Finish!!"
-echo "please set your terminal font as 'Hack Regular'"
+echo "please set your terminal font as 'Hack Nerd Font Regular'"
 echo "==="
 echo ""
