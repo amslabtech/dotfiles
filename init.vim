@@ -5,6 +5,8 @@
 noremap <Esc><Esc> <Cmd>nohlsearch<CR><Esc>
 noremap <Space>h ^
 noremap <Space>l $
+nnoremap <C-n> <Cmd>bnext<CR>
+nnoremap <C-p> <Cmd>bprevious<CR>
 
 " === Insert ===
 inoremap jj <Esc>
@@ -14,9 +16,6 @@ inoremap <C-b> <Left>
 inoremap <C-d> <del>
 
 " === For plugins ===
-" - barbar
-nnoremap <silent><C-n> <Cmd>BufferNext<CR>
-nnoremap <silent><C-p> <Cmd>BufferPrevious<CR>
 " - nvim-tree
 nnoremap <silent><C-e> <Cmd>NvimTreeToggle<CR>
 " - toggleterm
@@ -49,7 +48,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tomasr/molokai'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'romgrk/barbar.nvim'
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'machakann/vim-highlightedyank'
@@ -149,6 +148,8 @@ highlight GitGutterChange guifg=#FB8505 ctermfg=3
 lua << END
 -- lualine
 require'lualine'.setup { options = { theme = 'carbonfox' } }
+-- bufferline
+require'bufferline'.setup {  }
 --  nvim-tree
 require'nvim-tree'.setup {  }
 -- nvim-surround
