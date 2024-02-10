@@ -41,7 +41,7 @@ echo ">>> Done"
 echo ""
 
 # neovim
-if [ $# -eq 0 ]; then
+if [ $(arch) = x86_64 ]; then
   echo "=========================="
   echo " neovim will be installed"
   echo "=========================="
@@ -124,7 +124,7 @@ pip3 install pynvim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim -c 'PlugInstall --sync' -c qa
-if [ $# -eq 0 ]; then
+if [ $(arch) = x86_64 ]; then
   vim -c 'UpdateRemotePlugins' -c qa
 fi
 echo ">>> Done"
