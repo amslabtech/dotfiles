@@ -3,16 +3,10 @@
 
 注）`vim`コマンドで起動するエディタはNeovim
 ## インストール
-### アーキテクチャ：x86-64
-```
-git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
-~/dotfiles/install.sh
-```
-### アーキテクチャ：その他
 インストールされるNeovimのAppImageがx86-64用なので，その他のアーキテクチャでは代わりに簡易的なVimの設定が行われます．
 ```
 git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
-~/dotfiles/install.sh not_x86-64
+~/dotfiles/install.sh
 ```
 以下がインストールされます
 - Neovim
@@ -47,7 +41,7 @@ git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
 sudo update-alternatives --auto vim
 ```
 
-#### Vimのクリップボード連携が上手く行かない（アーキテクチャ：その他）
+#### Vimのクリップボード連携が上手く行かない（アーキテクチャがx86_64以外）
 以下を実行し，`vim-gtk`を選択して下さい
 ```
 sudo update-alternatives --config vim
