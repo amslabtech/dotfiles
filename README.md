@@ -35,7 +35,7 @@ git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
 #### Neovimのプラグインのインストールが開始されない
 エディタを再起動して下さい
 
-#### `Vim`コマンドでNeovimではなく，Vimを起動したい
+#### `vim`コマンドでNeovimではなく，Vimを起動したい
 以下を実行して下さい
 ```
 sudo update-alternatives --auto vim
