@@ -26,7 +26,7 @@ echo "=============================="
 echo " nerd-fonts will be installed"
 echo "=============================="
 if [ ! -d ~/.local/share/fonts ]; then
-    mkdir -p -v ~/.local/share/fonts
+  mkdir -p -v ~/.local/share/fonts
 fi
 cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/Hack/Regular/HackNerdFont-Regular.ttf
 echo ">>> Done"
@@ -42,15 +42,15 @@ echo ""
 
 # neovim
 if [ $# -eq 0 ]; then
-    echo "=========================="
-    echo " neovim will be installed"
-    echo "=========================="
-    sudo wget -O /opt/nvim.appimage https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
-    sudo chmod +x /opt/nvim.appimage
-    sudo ln -sf /opt/nvim.appimage /usr/bin/nvim
-    sudo ln -sf /usr/bin/nvim /usr/bin/vim
-    echo ">>> Done"
-    echo ""
+  echo "=========================="
+  echo " neovim will be installed"
+  echo "=========================="
+  sudo wget -O /opt/nvim.appimage https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+  sudo chmod +x /opt/nvim.appimage
+  sudo ln -sf /opt/nvim.appimage /usr/bin/nvim
+  sudo ln -sf /usr/bin/nvim /usr/bin/vim
+  echo ">>> Done"
+  echo ""
 fi
 
 # tmux
@@ -110,22 +110,22 @@ if [ ! -d ~/.vim/undo ]; then
   mkdir -pv ~/.vim/undo
 fi
 if [ -d ~/.vim/plugged ]; then
-    rm -rf ~/.vim/plugged
+  rm -rf ~/.vim/plugged
 fi
 if [ -d ~/.config/nvim/undo ]; then
-    rm -rf ~/.config/nvim/undo
+  rm -rf ~/.config/nvim/undo
 fi
 if [ ! -d ~/.config/nvim ]; then
-    mkdir -pv ~/.config/nvim
+  mkdir -pv ~/.config/nvim
 fi
 ln -sf $SCRIPT_DIR/vimrc ~/.vimrc
 ln -sf $SCRIPT_DIR/init.vim ~/.config/nvim/init.vim
 pip3 install pynvim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim -c 'PlugInstall --sync' -c qa
 if [ $# -eq 0 ]; then
-    vim -c 'UpdateRemotePlugins' -c qa
+  vim -c 'UpdateRemotePlugins' -c qa
 fi
 echo ">>> Done"
 echo ""
@@ -134,7 +134,7 @@ echo ""
 echo "setting tmux... "
 ln -sf $SCRIPT_DIR/tmux.conf ~/.tmux.conf
 if [ -d ~/.tmux ]; then
-    rm -rf ~/.tmux
+  rm -rf ~/.tmux
 fi
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/bin/install_plugins
