@@ -3,7 +3,8 @@
 
 注）`vim`コマンドで起動するエディタはNeovim
 ## インストール
-インストールされるNeovimのAppImageがx86-64用なので，その他のアーキテクチャでは代わりに簡易的なVimの設定が行われます．
+インストールされるNeovimのAppImageがx86-64用なので，その他のアーキテクチャでは代わりに簡易的なVimの設定が行われます<br>
+ただし，Neovimとは異なり，自動で補完候補が表示されないので，補完候補を表示したい場合は`Ctrl-n`を押して下さい
 ```
 git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
 ~/dotfiles/install.sh
