@@ -2,11 +2,11 @@
 " ####  keymapping  #####
 " #######################
 " === Normal ===
-noremap <Esc><Esc> <Cmd>nohlsearch<CR><Esc>
+noremap <Esc><Esc> :nohlsearch<CR><Esc>
 noremap <Space>h ^
 noremap <Space>l $
-nnoremap <C-n> <Cmd>bnext<CR>
-nnoremap <C-p> <Cmd>bprevious<CR>
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprevious<CR>
 
 " === Insert ===
 inoremap jj <Esc>
