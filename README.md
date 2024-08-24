@@ -25,6 +25,14 @@ git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
 - Neovim
 - Vim
 - tmux
+  - prefix key: `Ctrl-q`
+
+## 使い方
+### コピー
+#### Vim
+`v` or `Shift-v` or `Ctrl-v` → 範囲選択 → `y`
+#### tmux
+prefix key → `[` → 範囲選択（`space` or `Shift-v`で選択開始） → `y`
 
 ## トラブルシューティング
 #### インストールが途中で止まる
