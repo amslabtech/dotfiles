@@ -158,6 +158,11 @@ set incsearch
 colorscheme molokai
 " - rainbow
 let g:rainbow_active = 1
+let g:rainbow_conf = {
+\   'separately': {
+\       'cmake': 0,
+\   }
+\}
 " - vim-polyglot
 let g:cpp_member_highlight = 1
 let g:cpp_simple_highlight = 1
