@@ -3,22 +3,11 @@
 
 注）`vim`コマンドで起動するエディタはNeovim
 ## インストール
-インストールされるNeovimのAppImageがx86-64用なので，その他のアーキテクチャでは代わりに簡易的なVimの設定が行われます<br>
-ただし，Neovimとは異なり，自動で補完候補が表示されないので，補完候補を表示したい場合は`Ctrl-n`を押して下さい
 ```
 git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
 ~/dotfiles/install.sh
 ```
-以下がインストールされます
-- Neovim
-- Vim (vim-gtk)
-- tmux
-- xsel
-- python3
-- python3-pip
-- fuse
-- libfuse2
-- font (Hack Nerd Font Regular)
+注）Vimでは，自動で補完候補が表示されないので，補完候補を表示したい場合は`Ctrl-n`を押して下さい（Neovimではcoc.nvimが有効になっているため，補完候補が表示されます）
 
 以下がセットアップされます
 
