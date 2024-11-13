@@ -77,9 +77,9 @@ if [ -d ~/.vim/plugged ]; then
   rm -rf ~/.vim/plugged
 fi
 ln -sf $SCRIPT_DIR/vimrc ~/.vimrc
-ln -sf $SCRIPT_DIR/configs/basic-settings.vim ~/.vimrc/basic-settings.vim
-ln -sf $SCRIPT_DIR/configs/plugin-settings.vim ~/.vimrc/plugin-settings.vim
-ln -sf $SCRIPT_DIR/configs/plugins.vim ~/.vimrc/plugins.vim
+ln -sf $SCRIPT_DIR/configs/basic-settings.vim ~/.vim/basic-settings.vim
+ln -sf $SCRIPT_DIR/configs/plugin-settings.vim ~/.vim/plugin-settings.vim
+ln -sf $SCRIPT_DIR/configs/plugins.vim ~/.vim/plugins.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -116,7 +116,7 @@ echo ""
 
 # gitignore
 echo "setting gitignore... "
-if [[ ! -d ~/.config/git ]]; then
+if [ ! -d ~/.config/git ]; then
   mkdir -p ~/.config/git
 fi
 cat $SCRIPT_DIR/gitignore >> ~/.config/git/ignore
