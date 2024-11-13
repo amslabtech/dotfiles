@@ -123,6 +123,12 @@ cat $SCRIPT_DIR/gitignore >> ~/.config/git/ignore
 echo ">>> Done"
 echo ""
 
+# bash_aliases
+echo "setting bash_aliases... "
+echo "if [ -f $SCRIPT_DIR/configs/ros1_aliases.bash ]; then source $SCRIPT_DIR/configs/ros1_aliases.bash; fi" >> ~/.bash_aliases
+echo ">>> Done"
+echo ""
+
 echo ""
 echo "==="
 echo "Finish!!"
