@@ -1,5 +1,5 @@
 # Set alias commands for ROS
-if [[ -d /opt/ros ]]; then
+if [[ -d /opt/ros/noetic ]]; then
   alias cw='cd $ROS_WORKSPACE'
   alias cs='cd $ROS_WORKSPACE/src'
 
