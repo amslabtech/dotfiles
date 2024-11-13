@@ -6,7 +6,6 @@ if [[ -d /opt/ros ]]; then
   if [[ $ROS_VERSION -eq 1 ]]; then
     function cmk_export_compile_commands_this() {
       catkin build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --this
-      echo ""
       if [[ -e package.xml ]]; then
         local package_name=$(cat package.xml | grep '<name>' | awk -F '[>]' '{print $2}' | awk -F '[<]' '{print $1}')
         if [[ -e $ROS_WORKSPACE/build/$package_name/compile_commands.json ]]; then
