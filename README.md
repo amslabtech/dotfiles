@@ -23,6 +23,21 @@ git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
 #### tmux
 prefix key → `[` → 範囲選択（`space` or `Shift-v`で選択開始） → `y`
 
+### ROS1
+#### C++のROS補完有効化ビルド
+パッケージのルートで以下のコマンドを実行
+```bash
+cmk_export_compile_commands_this
+```
+
+## Tips
+### bashのterminalにgitのbranchを常に表示する設定
+`~/.bashrc`以下を追記
+```bash
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1)\$ '
+```
+
+
 ## トラブルシューティング
 #### インストールが途中で止まる
 - WSLの場合，pip installに時間がかかっている可能性が高いです．しばらく待つとインストールが進みます．
