@@ -15,6 +15,7 @@ git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
 - Vim
 - tmux
   - prefix key: `Ctrl-q`
+- Git
 
 ## 使い方
 ### コピー

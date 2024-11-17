@@ -114,12 +114,13 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo ">>> Done"
 echo ""
 
-# gitignore
-echo "setting gitignore... "
+# git
+echo "setting git... "
 if [ ! -d ~/.config/git ]; then
   mkdir -p ~/.config/git
 fi
 cat $SCRIPT_DIR/gitignore >> ~/.config/git/ignore
+cat $SCRIPT_DIR/gitconfig >> ~/.gitconfig
 echo ">>> Done"
 echo ""
 
