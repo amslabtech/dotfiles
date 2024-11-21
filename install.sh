@@ -50,6 +50,9 @@ elif [[ $(arch) == "aarch64" ]]; then
     rm -rf ~/neovim
   fi
 fi
+if [[ -e /usr/bin/nvim && -e /usr/bin/vim ]]; then
+  sudo ln -sf /usr/bin/nvim /usr/bin/vim
+fi
 
 echo "=============================="
 echo " nerd-fonts will be installed"
