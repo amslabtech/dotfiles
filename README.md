@@ -26,17 +26,20 @@ prefix key → `[` → 範囲選択（`space` or `Shift-v`で選択開始） →
 #### コピー
 `v` or `Shift-v` or `Ctrl-v` → 範囲選択 → `y`
 
-#### ROS1
-##### C++のROS補完有効化ビルド
+#### ROS1補完
+C++のROS補完有効化ビルド
 - デバッグ情報付きのリリース・ビルド
 - compile_commands.json出力 + シンボリックリンク作成
 ```bash
 cmk_export_compile_commands      # 全てのパッケージ
 cmk_export_compile_commands_this # 現在のパッケージ
 ```
-ビルドせずにROSの最低限の補完を有効化する場合</br>
-注）自作のパッケージのヘッダファイルの補完を有効化する場合は，ビルドが必要です
+ビルドせずに最低限のROS補完を有効化する場合</br>
+- 以下のパスが追加されます
+  - /opt/ros/noetic/include
+  - \<target package>/include
 ```bash
+cd <target package>
 create_simple_compile_flags
 ```
 注）pythonはデフォルトで有効化されている
