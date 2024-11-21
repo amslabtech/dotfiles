@@ -18,22 +18,46 @@ git clone https://github.com/amslabtech/dotfiles.git ~/dotfiles
 - Git
 
 ## 使い方
-### コピー
-#### Vim
-`v` or `Shift-v` or `Ctrl-v` → 範囲選択 → `y`
-#### tmux
+### tmux
+#### コピー
 prefix key → `[` → 範囲選択（`space` or `Shift-v`で選択開始） → `y`
 
-### ROS1
-#### C++のROS補完有効化ビルド
-パッケージのルートで以下のコマンドを実行
+### Vim
+#### コピー
+`v` or `Shift-v` or `Ctrl-v` → 範囲選択 → `y`
+
+#### ROS1
+##### C++のROS補完有効化ビルド
+- デバッグ情報付きのリリース・ビルド
+- compile_commands.json出力 + シンボリックリンク作成
 ```bash
-cmk_export_compile_commands_this
+cmk_export_compile_commands      # 全てのパッケージ
+cmk_export_compile_commands_this # 現在のパッケージ
 ```
+ビルドせずにROSの最低限の補完を有効化する場合</br>
+注）自作のパッケージのヘッダファイルの補完を有効化する場合は，ビルドが必要です
+```bash
+create_simple_compile_flags
+```
+注）pythonはデフォルトで有効化されている
+
+#### 一部のキーバインド
+| キーバインド | 説明 |
+| --- | --- |
+| `Ctrl-e` | ファイルエクスプローラを開く・閉じる (`u`: 上のディレクトリに移動, `enter`: ファイル・ディレクトリを開く) |
+| `Ctrl-w` | 選択ウィンドウの変更 |
+| `Ctrl-n` | 次のタブのファイルに移動 |
+| `Ctrl-p` | 前のタブのファイルに移動 |
+| `Shift-h` | ホーバー（関数定義などの情報）を表示 |
+| `df` | 定義へジャンプ |
+| `rf` | 参照へジャンプ |
+| `rn` | 名前変更 |
+| `mne` | 次のエラーへ移動 |
+| `mpe` | 前のエラーへ移動 |
 
 ## Tips
 ### bashのterminalにgitのbranchを常に表示する設定
-`~/.bashrc`以下を追記
+`~/.bashrc`に以下を追記
 ```bash
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1)\$ '
 ```
