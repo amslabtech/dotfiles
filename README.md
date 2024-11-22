@@ -31,8 +31,8 @@ C++のROS補完有効化ビルド
 - デバッグ情報付きのリリース・ビルド
 - compile_commands.json出力 + シンボリックリンク作成
 ```bash
-cmk_export_compile_commands      # 全てのパッケージ
-cmk_export_compile_commands_this # 現在のパッケージ
+cmk_export_compile_commands        # 全てのパッケージ
+cmk_export_compile_commands --this # 現在のパッケージ
 ```
 ビルドせずに最低限のROS補完を有効化する場合</br>
 - 以下のパスが追加されます
