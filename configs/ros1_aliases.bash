@@ -8,7 +8,9 @@ if [[ -d /opt/ros/noetic ]]; then
     echo "-I${PWD}/include" >> compile_flags.txt
   }
 
-  function ln-compile-commands-json() {
+  function cmk_export_compile_commands() {
+    catkin build $@ --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+
     # Find compile_commands.json in build directory and create symlink to the top of the package directories.
     local package_xmls=$(find ${ROS_WORKSPACE}/src -name package.xml)
     for package_xml in $(echo ${package_xmls}); do
@@ -17,15 +19,5 @@ if [[ -d /opt/ros/noetic ]]; then
         ln -sf ${ROS_WORKSPACE}/build/${package_name}/compile_commands.json $(rospack find ${package_name})/compile_commands.json
       fi
     done
-  }
-
-  function cmk_export_compile_commands() {
-    catkin build --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-    ln-compile-commands-json
-  }
-
-  function cmk_export_compile_commands_this() {
-    catkin build --this --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-    ln-compile-commands-json
   }
 fi
