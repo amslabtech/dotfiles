@@ -50,7 +50,7 @@ elif [[ $(arch) == "aarch64" ]]; then
     rm -rf ~/neovim
   fi
 fi
-if [[ -e /usr/bin/nvim && -e /usr/bin/vim ]]; then
+if [[ -e /usr/bin/nvim ]]; then
   sudo ln -sf /usr/bin/nvim /usr/bin/vim
 fi
 
